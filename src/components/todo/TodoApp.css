@@ -1,0 +1,18 @@
+.LoginForm{
+    margin: 40px;
+}
+
+.LoginButton{
+    margin: 20px;
+    padding: 3px;
+    width: 80px;
+    font-size: 15px;
+}
+
+
+footer{
+    bottom: 0;
+    position: absolute;
+    width:100%;
+    height: 40px;
+}
