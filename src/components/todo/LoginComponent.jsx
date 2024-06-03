@@ -10,13 +10,17 @@ export default function LoginComponent(){
     const authContext = useAuth()
 
 
-    function checkstatus() {
-        if(authContext.login(username,password)){
-            setLoginStatus("success")
-            navigate(`/welcome/${username}`)
-        }else{
+    async function checkstatus() {
+        try{
+            if(await authContext.login(username,password)){
+               setLoginStatus("success")
+                navigate(`/welcome/${username}`)
+            }
+        }catch(error){
             setLoginStatus("fail")
-        }
+            console.log(error)
+        }    
+        
     }
 
 

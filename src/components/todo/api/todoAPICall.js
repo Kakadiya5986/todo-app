@@ -1,10 +1,4 @@
-import axios from "axios"
-
-const apiClient = axios.create(
-    {
-        baseURL:'http://localhost:8080'
-    }
-)
+import {apiClient} from "./ApiClient";
 
 export const retrieveTodosApi = (username) => apiClient.get(`/users/${username}/todos`)
 export const deleteTodoApi = (id,username) => apiClient.delete(`/users/${username}/todos/${id}`)
